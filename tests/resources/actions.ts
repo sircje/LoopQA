@@ -15,10 +15,11 @@ export async function verifyTaskInColumn(
 
 export async function verifyTags(
     page: Page,
+    task: string,
     tags: string[]
 ) {
+    const taskCard = page.locator(`h3:has-text("${task}")`).first().locator('..');
     for (const tag of tags) {
-        const tagElement = page.locator(`span:has-text("${tag}")`).first();
-        await expect(tagElement).toContainText(tag);
+        await expect(taskCard).toContainText(tag);
     }
 }

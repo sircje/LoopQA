@@ -13,7 +13,7 @@ test.describe("LoopQA Technical Evaluation", () => {
       await login(page);
       await navigateToProject(page, tc.project);
       await verifyTaskInColumn(page, tc.column, tc.task);
-      await verifyTags(page, tc.tags);
+      await verifyTags(page, tc.task, tc.tags);
     });
   }
 });
