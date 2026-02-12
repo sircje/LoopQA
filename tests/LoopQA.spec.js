@@ -5,7 +5,7 @@ import {
   verifyTaskInColumn,
   verifyTags,
 } from "./resources/actions";
-import {testCases} from "./cases/testCases";
+import testCases from "./cases/testCases.json";
 
 test.describe("LoopQA Technical Evaluation", () => {
   for (const tc of testCases) {
