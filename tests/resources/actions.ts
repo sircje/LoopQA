@@ -15,7 +15,6 @@ export async function verifyTaskInColumn(
 
 export async function verifyTags(
     page: Page,
-    task: string,
     tags: string[]
 ) {
     for (const tag of tags) {
