@@ -1,12 +1,4 @@
 import { expect, Page } from "@playwright/test";
-import { test } from "@playwright/test";
-
-test.afterEach(async ({ page }, testInfo) => {
-    if (testInfo.status !== testInfo.expectedStatus) {
-        console.log("Test failed — pausing for inspection");
-        await new Promise(() => {}); // never resolves
-    }
-});
 
 export async function navigateToProject(page: Page, project: string) {
     await page.click(`text=${project}`);
